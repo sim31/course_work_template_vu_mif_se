@@ -130,10 +130,10 @@
      \begin{flushright}
         \large
         \singlespacing
-        {\begin{tabular}[t]{l l}%
+        {\begin{tabular}[t]{l l l}%
         \medskip Atliko: &\; \@status \\
-        \medskip\bigskip   &\; \@author \hfill \@signatureplace \\
-        \bigskip Darbo vadovas: &\; \@supervisor \hfill  \@signatureplace \\
+        \medskip\bigskip   &\; \@author \hfill &\@signatureplace \\
+        \bigskip Darbo vadovas: &\; \@supervisor \hfill &\@signatureplace \\
         % Recenzentas: &\; \@reviewer \hfill \@signatureplace
         \end{tabular} \par}%
      \end{flushright}
@@ -143,11 +143,11 @@
      \begin{flushright}
         \large
         \singlespacing
-        {\begin{tabular}[t]{l l}%
+        {\begin{tabular}[t]{l l l}%
         \medskip Atliko: &\; \@status \\
-        \bigskip   &\; \@author \hfill \@signatureplace \\
-        \medskip\bigskip &\; \@secondauthor \hfill \@signatureplace \\
-        \bigskip Darbo vadovas: &\; \@supervisor \hfill  \@signatureplace \\
+        \bigskip   &\; \@author \hfill &\@signatureplace \\
+        \medskip\bigskip &\; \@secondauthor \hfill &\@signatureplace \\
+        \bigskip Darbo vadovas: &\; \@supervisor \hfill &\@signatureplace \\
         % Recenzentas: &\; \@reviewer \hfill \@signatureplace
         \end{tabular} \par}%
      \end{flushright}
