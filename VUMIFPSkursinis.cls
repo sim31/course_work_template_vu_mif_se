@@ -4,7 +4,7 @@
 %% Latest version available here: https://github.com/LIKS/course_work_template_vu_mif_se
 %% Any suggestions or contributions are welcome!  Also see: http://latex.liks.lt!
 %
-%%  License CC BY 4.0 (see more at http://creativecommons.org/licenses/by/4.0/) 
+%%  License CC BY 4.0 (see more at http://creativecommons.org/licenses/by/4.0/)
 % You are free to (a) share - copy and redistribute the material in any medium
 % or format (b) adapt - remix, transform, and build upon the material for any
 % purpose, even commercially. As long as you give appropriate credit, provide a
@@ -45,7 +45,7 @@
 \renewcommand{\footrulewidth}{0pt}
 \lhead{}
 \chead{}
-\rhead{} 
+\rhead{}
 \lfoot{}
 \cfoot{}
 \rfoot{\thepage} % Numeris bus puslapio apačioje dešinėje
@@ -71,6 +71,8 @@
 \newcommand{\secondauthor}[1]{\def\@secondauthor{#1}}
 \newcommand{\thirdauthor}[1]{\def\@thirdauthor{#1}}
 \newcommand{\fourthauthor}[1]{\def\@fourthauthor{#1}}
+\newcommand{\fifthauthor}[1]{\def\@fifthauthor{#1}}
+\newcommand{\version}[1]{\def\@version{#1}}
 
 % Pirmos eilutės paragrafe atitraukimas 1 cm
 \setlength{\parindent}{1cm}
@@ -123,77 +125,101 @@
      \null\vfil
      \vskip 2.5cm
      {\singlespacing \LARGE \textbf{\@title} \par}
-     {\singlespacing \Large \textbf{\@titleineng} \par}%
+     {\singlespacing \Large \textbf{\@titleineng} \par}
      \vskip 0.8cm
-     {\large \@papertype}%
+     {\large \@papertype}
   \end{center}
 
-  \@ifundefined{@fourthauthor}{
-    \@ifundefined{@thirdauthor}{
-        \@ifundefined{@secondauthor}{
-            \vskip 3cm
-            \begin{flushright}
-                \large
-                \singlespacing
-                {\begin{tabular}[t]{l l}%
-                \medskip Atliko: &\; \@status \\
-                \medskip\bigskip   &\; \@author \hfill \@signatureplace \\
-                \bigskip Darbo vadovas: &\; \@supervisor \hfill  \@signatureplace \\
-                % Recenzentas: &\; \@reviewer \hfill \@signatureplace
-                \end{tabular} \par}%
-            \end{flushright}
-            \vskip 4cm
-        }{
-            \vskip 2.8cm
-            \begin{flushright}
-                \large
-                \singlespacing
-                {\begin{tabular}[t]{l l}%
-                \medskip Atliko: &\; \@status \\
-                \bigskip   &\; \@author \hfill \@signatureplace \\
-                \medskip\bigskip &\; \@secondauthor \hfill \@signatureplace \\
-                \bigskip Darbo vadovas: &\; \@supervisor \hfill  \@signatureplace \\
-                % Recenzentas: &\; \@reviewer \hfill \@signatureplace
-                \end{tabular} \par}%
-            \end{flushright}
-            \vskip 3.8cm
-        }
+  \@ifundefined{@fifthauthor}{
+    \@ifundefined{@fourthauthor}{
+      \@ifundefined{@thirdauthor}{
+          \@ifundefined{@secondauthor}{
+              \vskip 3cm
+              \begin{flushright}
+                  \large
+                  \singlespacing
+                  {\begin{tabular}[t]{l l}%
+                  \medskip Atliko: &\; \@status \\
+                  \medskip\bigskip   &\; \@author \hfill \@signatureplace \\
+                  \bigskip Darbo vadovas: &\; \@supervisor \hfill  \@signatureplace \\
+                  % Recenzentas: &\; \@reviewer \hfill \@signatureplace
+                  \end{tabular} \par}%
+              \end{flushright}
+              \vskip 4cm
+          }{
+              \vskip 2.8cm
+              \begin{flushright}
+                  \large
+                  \singlespacing
+                  {\begin{tabular}[t]{l l}%
+                  \medskip Atliko: &\; \@status \\
+                  \bigskip   &\; \@author \hfill \@signatureplace \\
+                  \medskip\bigskip &\; \@secondauthor \hfill \@signatureplace \\
+                  \bigskip Darbo vadovas: &\; \@supervisor \hfill  \@signatureplace \\
+                  % Recenzentas: &\; \@reviewer \hfill \@signatureplace
+                  \end{tabular} \par}%
+              \end{flushright}
+              \vskip 3.8cm
+          }
+      }{
+          \vskip 2.6cm
+          \begin{flushright}
+              \large
+              \singlespacing
+              {\begin{tabular}[t]{l l}%
+              \medskip Atliko: &\; \@status \\
+              \bigskip   &\; \@author \hfill \@signatureplace \\
+              \bigskip &\; \@secondauthor \hfill \@signatureplace \\
+              \medskip\bigskip &\; \@thirdauthor \hfill \@signatureplace \\
+              \bigskip Darbo vadovas: &\; \@supervisor \hfill  \@signatureplace \\
+              % Recenzentas: &\; \@reviewer \hfill \@signatureplace
+              \end{tabular} \par}%
+          \end{flushright}
+          \vskip 3.6cm
+      }
     }{
-        \vskip 2.6cm
-        \begin{flushright}
-            \large
-            \singlespacing
-            {\begin{tabular}[t]{l l}%
-            \medskip Atliko: &\; \@status \\
-            \bigskip   &\; \@author \hfill \@signatureplace \\
-            \bigskip &\; \@secondauthor \hfill \@signatureplace \\
-            \medskip\bigskip &\; \@thirdauthor \hfill \@signatureplace \\
-            \bigskip Darbo vadovas: &\; \@supervisor \hfill  \@signatureplace \\
-            % Recenzentas: &\; \@reviewer \hfill \@signatureplace
-            \end{tabular} \par}%
-        \end{flushright}
-        \vskip 3.6cm
+      \vskip 2.4cm
+      \begin{flushright}
+          \large
+          \singlespacing
+          {\begin{tabular}[t]{l l}%
+          \medskip Atliko: &\; \@status \\
+          \bigskip   &\; \@author \hfill \@signatureplace \\
+          \bigskip &\; \@secondauthor \hfill \@signatureplace \\
+          \bigskip &\; \@thirdauthor \hfill \@signatureplace \\
+          \medskip\bigskip &\; \@fourthauthor \hfill \@signatureplace \\
+          \bigskip Darbo vadovas: &\; \@supervisor \hfill  \@signatureplace \\
+          % Recenzentas: &\; \@reviewer \hfill \@signatureplace
+          \end{tabular} \par}%
+      \end{flushright}
+      \vskip 3.4cm
     }
   }{
-    \vskip 2.4cm
+    \vskip 2.2cm
     \begin{flushright}
         \large
         \singlespacing
-        {\begin{tabular}[t]{l l}%
-        \medskip Atliko: &\; \@status \\
-        \bigskip   &\; \@author \hfill \@signatureplace \\
-        \bigskip &\; \@secondauthor \hfill \@signatureplace \\
-        \bigskip &\; \@thirdauthor \hfill \@signatureplace \\
-        \medskip\bigskip &\; \@fourthauthor \hfill \@signatureplace \\
-        \bigskip Darbo vadovas: &\; \@supervisor \hfill  \@signatureplace \\
+        {\begin{tabular}[t]{l l r}%
+        \medskip Atliko: &\; \@status  &\\
+        \medskip   &\; \@author & \hfill \@signatureplace \\
+        \medskip &\; \@secondauthor & \hfill \@signatureplace \\
+        \medskip &\; \@thirdauthor & \@signatureplace \\
+        \medskip &\; \@fourthauthor & \@signatureplace \\
+        \medskip\bigskip &\; \@fifthauthor & \@signatureplace \\
+        \bigskip Darbo vadovas: & \@supervisor & \@signatureplace \\
         % Recenzentas: &\; \@reviewer \hfill \@signatureplace
         \end{tabular} \par}%
     \end{flushright}
-    \vskip 3.4cm
+    \vskip 3.2cm
   }
-  
+
   \begin{center}
-    {\singlespacing \@date \par}%   
+  {
+    \ifdefined\@version
+      \singlespacing Versija: \@version \par
+    \fi
+    \singlespacing \@date \par
+  }
   \end{center}\par
   \@thanks
   \vfil\null
@@ -213,6 +239,7 @@
   \global\let\@papertype\@empty
   \global\let\@supervisor\@empty
   \global\let\@reviewer\@empty
+  \global\let\@version\@empty
   \global\let\title\relax
   \global\let\author\relax
   \global\let\date\relax
@@ -229,7 +256,7 @@
 % Skyriaus pavadinimas, turinyje neturintis numerio
 \newcommand{\sectionnonum}[1]{%
     \section*{#1}%
-    \addcontentsline{toc}{section}{#1}% 
+    \addcontentsline{toc}{section}{#1}%
 }
 
 % Skyriaus pavadinimas, neturintis numerio bei neįeinantis į turinį
@@ -291,7 +318,7 @@
     }%
     \setcounter{section}{0}%
     \renewcommand{\thesection}{nr. \arabic{section}}%
-    % Insert record to TOC 
+    % Insert record to TOC
     \addcontentsline{toc}{section}{\MakeUppercase{Priedai}}%}
 }
 
