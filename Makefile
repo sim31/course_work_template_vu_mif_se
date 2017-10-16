@@ -1,6 +1,9 @@
+default: generuoti removeGenerated
+
 generuoti:
 	xelatex kursinis.tex
 	biber kursinis
+	xelatex kursinis.tex
 
 ubuntu:
 	echo "Diegiamas LaTeX (PdfLaTeX, XeTeX ir kt.)"
@@ -11,6 +14,10 @@ ubuntu:
 	sudo apt-get install fonts-texgyre
 	echo "Diegiamas Palemonas šriftas į sistemą"
 	sudo cp -r Palemonas-2.1 /usr/share/fonts/truetype/
+
+
+removeGenerated:
+	rm -f kursinis.toc kursinis.run.xml kursinis.log kursinis.blg kursinis.bcf kursinis.bbl kursinis.aux
 
 clean:
 	git clean -dfx
