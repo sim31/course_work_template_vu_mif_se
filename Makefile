@@ -1,9 +1,11 @@
+fileName = kursinis
+
 default: generuoti removeGenerated
 
 generuoti:
-	xelatex kursinis.tex
-	biber kursinis
-	xelatex kursinis.tex
+	xelatex $(fileName).tex
+	biber $(fileName)
+	xelatex $(fileName).tex
 
 ubuntu:
 	echo "Diegiamas LaTeX (PdfLaTeX, XeTeX ir kt.)"
@@ -17,7 +19,7 @@ ubuntu:
 
 
 removeGenerated:
-	rm -f kursinis.toc kursinis.run.xml kursinis.log kursinis.blg kursinis.bcf kursinis.bbl kursinis.aux
+	rm -f $(fileName).toc $(fileName).run.xml $(fileName).log $(fileName).blg $(fileName).bcf $(fileName).bbl $(fileName).aux
 
 clean:
 	git clean -dfx
