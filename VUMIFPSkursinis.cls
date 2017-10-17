@@ -125,7 +125,9 @@
      \null\vfil
      \vskip 2.5cm
      {\singlespacing \LARGE \textbf{\@title} \par}
-     {\singlespacing \Large \textbf{\@titleineng} \par}
+     \ifdefined\@titleineng
+        {\singlespacing \Large \textbf{\@titleineng} \par}
+     \fi
      \vskip 0.8cm
      {\large \@papertype}
   \end{center}
