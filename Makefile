@@ -6,7 +6,7 @@ generuoti:
 	xelatex $(fileName).tex
 	biber $(fileName)
 	xelatex $(fileName).tex
-	open kursinis.pdf || xdg-open kursinis.pdf
+	open $(fileName).pdf || xdg-open $(fileName).pdf
 
 ubuntu:
 	echo "Diegiamas LaTeX (PdfLaTeX, XeTeX ir kt.)"
