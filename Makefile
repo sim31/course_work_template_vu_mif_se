@@ -1,11 +1,12 @@
 fileName = kursinis
 
-default: generuoti removeGenerated
+default: generuoti
 
 generuoti:
 	xelatex $(fileName).tex
 	biber $(fileName)
 	xelatex $(fileName).tex
+	open kursinis.pdf || xdg-open kursinis.pdf
 
 ubuntu:
 	echo "Diegiamas LaTeX (PdfLaTeX, XeTeX ir kt.)"

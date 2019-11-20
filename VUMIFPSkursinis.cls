@@ -65,6 +65,7 @@
 \newcommand{\papertype}[1]{\def\@papertype{#1}}
 \newcommand{\department}[1]{\def\@department{#1}}
 \newcommand{\supervisor}[1]{\def\@supervisor{#1}}
+\newcommand{\consultant}[1]{\def\@consultant{#1}}
 \newcommand{\reviewer}[1]{\def\@reviewer{#1}}
 \newcommand{\status}[1]{\def\@status{#1}}
 \newcommand{\titleineng}[1]{\def\@titleineng{#1}}
@@ -112,15 +113,14 @@
 }
 
 \renewcommand\maketitle{\begin{titlepage}%
-  \checkifdefined{@department}%
-    {Tituliniame puslapyje nenurodyta katedra (komanda \protect\department)}
+  % \checkifdefined{@department}%
+  %   {Tituliniame puslapyje nenurodyta katedra (komanda \protect\department)}
   \checkifdefined{@supervisor}%
     {Tituliniame puslapyje nenurodytas darbo vadovas (komanda \protect\supervisor)}
    ~
   \begin{center}
       {\setstretch{1.3}\large \MakeUppercase{\@university} \\
-          \MakeUppercase{\@faculty} \\
-         \MakeUppercase{\@department}\par }
+          \MakeUppercase{\@faculty} \par }
 
      \null\vfil
      \vskip 2.5cm
@@ -144,6 +144,7 @@
                   \medskip Atliko: &\; \@status \\
                   \medskip\bigskip   &\; \@author \hfill \@signatureplace \\
                   \bigskip Darbo vadovas: &\; \@supervisor \hfill  \@signatureplace \\
+                  % \medskip Konsultantas: &\; \@consultant \\
                   % Recenzentas: &\; \@reviewer \hfill \@signatureplace
                   \end{tabular} \par}%
               \end{flushright}
@@ -208,7 +209,7 @@
         \medskip\bigskip &\; \@thirdauthor & \hfill \@signatureplace \\
         \medskip\bigskip &\; \@fourthauthor & \hfill \@signatureplace \\
         \medskip\bigskip &\; \@fifthauthor & \@signatureplace \\
-        \bigskip Darbo vadovas: & \@supervisor & \@signatureplace \\
+        \bigskip Darbo vadovas: & \@supervisor \hfill & \@signatureplace \\
         % Recenzentas: &\; \@reviewer \hfill \@signatureplace
         \end{tabular} \par}%
     \end{flushright}
@@ -240,6 +241,7 @@
   \global\let\@department\@empty
   \global\let\@papertype\@empty
   \global\let\@supervisor\@empty
+  \global\let\@consultant\@empty
   \global\let\@reviewer\@empty
   \global\let\@version\@empty
   \global\let\title\relax
@@ -328,10 +330,8 @@
     \refstepcounter{section}%
     \addcontentsline{toc}{subsection}%
         {\arabic{section} priedas.~#2}%
-    {\large\bfseries\appendixname\ \thesection\par
-     #2\par}% \nohyphens\centering#2\par}%
+    {\large\bfseries\arabic{section} priedas. #2\par}% \nohyphens\centering#2\par}%
     \sectionmark{#1}\vspace{\baselineskip}%
-    \footnotesize%
 }
 
 \def\@sAppendix#1{%
