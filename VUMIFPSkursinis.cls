@@ -55,9 +55,9 @@
 \WarningFilter{caption}{Unsupported document class}
 
 % Po lentelės antraštės prefiksu bus dedamas taškas
-\RequirePackage{caption}
-\captionsetup*[table]{labelsep=period}
-\captionsetup*[figure]{labelsep=period, name=pav}
+% \RequirePackage{caption}
+% \captionsetup*[table]{labelsep=period, name=table}
+% \captionsetup*[figure]{labelsep=period, name=fig}
 
 % Informacijos tituliniame puslapyje kintamieji
 \newcommand{\university}[1]{\def\@university{#1}}
@@ -141,9 +141,9 @@
                   \large
                   \singlespacing
                   {\begin{tabular}[t]{l l}%
-                  \medskip Atliko: &\; \@status \\
+                  \medskip Author: &\; \@status \\
                   \medskip\bigskip   &\; \@author \hfill \@signatureplace \\
-                  \bigskip Darbo vadovas: &\; \@supervisor \hfill  \@signatureplace \\
+                  \bigskip Supervisor: &\; \@supervisor \hfill  \@signatureplace \\
                   % \medskip Konsultantas: &\; \@consultant \\
                   % Recenzentas: &\; \@reviewer \hfill \@signatureplace
                   \end{tabular} \par}%
@@ -155,10 +155,10 @@
                   \large
                   \singlespacing
                   {\begin{tabular}[t]{l l}%
-                  \medskip Atliko: &\; \@status \\
+                  \medskip Author: &\; \@status \\
                   \bigskip   &\; \@author \hfill \@signatureplace \\
                   \medskip\bigskip &\; \@secondauthor \hfill \@signatureplace \\
-                  \bigskip Darbo vadovas: &\; \@supervisor \hfill  \@signatureplace \\
+                  \bigskip Supervisor: &\; \@supervisor \hfill  \@signatureplace \\
                   % Recenzentas: &\; \@reviewer \hfill \@signatureplace
                   \end{tabular} \par}%
               \end{flushright}
@@ -170,11 +170,11 @@
               \large
               \singlespacing
               {\begin{tabular}[t]{l l}%
-              \medskip Atliko: &\; \@status \\
+              \medskip Author: &\; \@status \\
               \bigskip   &\; \@author \hfill \@signatureplace \\
               \bigskip &\; \@secondauthor \hfill \@signatureplace \\
               \medskip\bigskip &\; \@thirdauthor \hfill \@signatureplace \\
-              \bigskip Darbo vadovas: &\; \@supervisor \hfill  \@signatureplace \\
+              \bigskip Supervisor: &\; \@supervisor \hfill  \@signatureplace \\
               % Recenzentas: &\; \@reviewer \hfill \@signatureplace
               \end{tabular} \par}%
           \end{flushright}
@@ -186,12 +186,12 @@
           \large
           \singlespacing
           {\begin{tabular}[t]{l l}%
-          \medskip Atliko: &\; \@status \\
+          \medskip Author: &\; \@status \\
           \bigskip   &\; \@author \hfill \@signatureplace \\
           \bigskip &\; \@secondauthor \hfill \@signatureplace \\
           \bigskip &\; \@thirdauthor \hfill \@signatureplace \\
           \medskip\bigskip &\; \@fourthauthor \hfill \@signatureplace \\
-          \bigskip Darbo vadovas: &\; \@supervisor \hfill  \@signatureplace \\
+          \bigskip Supervisor: &\; \@supervisor \hfill  \@signatureplace \\
           % Recenzentas: &\; \@reviewer \hfill \@signatureplace
           \end{tabular} \par}%
       \end{flushright}
@@ -203,13 +203,13 @@
         \large
         \singlespacing
         {\begin{tabular}[t]{l l l}%
-        \medskip Atliko: &\; \@status  &\\
+        \medskip Author: &\; \@status  &\\
         \bigskip   &\; \@author & \hfill &\@signatureplace \\
         \medskip\bigskip &\; \@secondauthor & \hfill \@signatureplace \\
         \medskip\bigskip &\; \@thirdauthor & \hfill \@signatureplace \\
         \medskip\bigskip &\; \@fourthauthor & \hfill \@signatureplace \\
         \medskip\bigskip &\; \@fifthauthor & \@signatureplace \\
-        \bigskip Darbo vadovas: & \@supervisor \hfill & \@signatureplace \\
+        \bigskip Supervisor: & \@supervisor \hfill & \@signatureplace \\
         % Recenzentas: &\; \@reviewer \hfill \@signatureplace
         \end{tabular} \par}%
     \end{flushright}
@@ -323,14 +323,14 @@
     \setcounter{section}{0}%
     \renewcommand{\thesection}{nr. \arabic{section}}%
     % Insert record to TOC
-    \addcontentsline{toc}{section}{\MakeUppercase{Priedai}}%}
+    \addcontentsline{toc}{section}{\MakeUppercase{Appendix}}%}
 }
 
 \def\@Appendix[#1]#2{%
     \refstepcounter{section}%
     \addcontentsline{toc}{subsection}%
-        {\arabic{section} priedas.~#2}%
-    {\large\bfseries\arabic{section} priedas. #2\par}% \nohyphens\centering#2\par}%
+        {Appendix \arabic{section}.~#2}%
+    {\large\bfseries Appendix \arabic{section}. #2\par}% \nohyphens\centering#2\par}%
     \sectionmark{#1}\vspace{\baselineskip}%
 }
 
@@ -343,7 +343,7 @@
 
 % Literatūros sąrašą reikia pervadinti
 \addto\captionslithuanian{%
-    \renewcommand{\refname}{\v{S}altiniai}%
+    \renewcommand{\refname}{References}%
 }
 
 % Apibrėžiame ketvirto lygio skyrius
@@ -382,3 +382,13 @@
 % Tarpai tarp išnašų eilučių nustatomi į 1.5 eilutės
 \let\oldfootnote\footnote
 \renewcommand{\footnote}[1]{\oldfootnote{\onehalfspacing #1}}
+
+\addto\captionslithuanian{
+  \renewcommand{\contentsname}%
+    {Contents}%
+}
+
+% Trying to make figure captions into "Fig 1" instead of "1 fig". Problem a caption name then.
+\addto\captionslithuanian{
+  \renewcommand{\figurename}{Fig \arabic{figure}.}
+}
