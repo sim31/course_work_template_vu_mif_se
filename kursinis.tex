@@ -12,6 +12,10 @@
 \usepackage{listings}
 \usepackage{subfig}
 \usepackage{wrapfig}
+\usepackage{titlecaps}
+% titlecaps includes \titlecap command which makes titlecase
+% Below command specifies words which shouldn't be capitalized in title case
+\Addlcwords{is of on in the a an for and}
 
 \usepackage{enumitem}
 %PAKEISTA, tarpai tarp sąrašo elementų
@@ -23,7 +27,7 @@
 \faculty{Faculty of Mathematics and Informatics}
 %\department{Programų sistemų katedra}
 \papertype{Project work}
-\title{Tema}
+\title{\titlecap{Tema in title case english}}
 %\titleineng{Investigation Methods of Software Development}
 \status{4th year, 5th group student}
 \author{Vardenis Pavardenis}
