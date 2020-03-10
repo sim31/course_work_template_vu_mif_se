@@ -102,7 +102,7 @@
 \newcommand{\@signatureplace}{%
     \parbox[t]{2.5cm}{%
         \makebox[2.5cm]{\raisebox{-0.5ex}{\scriptsize
-        (para\v{s}as) }}}
+        (signature) }}}
 }
 
 \newcommand{\checkifdefined}[2]{%
