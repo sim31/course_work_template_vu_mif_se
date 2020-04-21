@@ -142,11 +142,10 @@
                   \large
                   \singlespacing
                   {\begin{tabular}[t]{l l}%
-                  \medskip Author: &\; \@status \\
-                  \medskip\bigskip   &\; \@author \hfill \@signatureplace \\
+                  \bigskip Author: &\; \@author \hfill \@signatureplace \\
                   \bigskip Supervisor: &\; \@supervisor \hfill  \@signatureplace \\
                   % \medskip Konsultantas: &\; \@consultant \\
-                  % Recenzentas: &\; \@reviewer \hfill \@signatureplace
+                  \medskip Reviewer: &\; \@reviewer \hfill \@signatureplace
                   \end{tabular} \par}%
               \end{flushright}
               \vskip 4cm
@@ -156,11 +155,10 @@
                   \large
                   \singlespacing
                   {\begin{tabular}[t]{l l}%
-                  \medskip Author: &\; \@status \\
-                  \bigskip   &\; \@author \hfill \@signatureplace \\
+                  \bigskip Author: &\; \@author \hfill \@signatureplace \\
                   \medskip\bigskip &\; \@secondauthor \hfill \@signatureplace \\
                   \bigskip Supervisor: &\; \@supervisor \hfill  \@signatureplace \\
-                  % Recenzentas: &\; \@reviewer \hfill \@signatureplace
+                  \medskip Reviewer: &\; \@reviewer \hfill \@signatureplace
                   \end{tabular} \par}%
               \end{flushright}
               \vskip 3.8cm
@@ -171,12 +169,11 @@
               \large
               \singlespacing
               {\begin{tabular}[t]{l l}%
-              \medskip Author: &\; \@status \\
-              \bigskip   &\; \@author \hfill \@signatureplace \\
+              \bigskip Author: &\; \@author \hfill \@signatureplace \\
               \bigskip &\; \@secondauthor \hfill \@signatureplace \\
               \medskip\bigskip &\; \@thirdauthor \hfill \@signatureplace \\
               \bigskip Supervisor: &\; \@supervisor \hfill  \@signatureplace \\
-              % Recenzentas: &\; \@reviewer \hfill \@signatureplace
+              \medskip Reviewer: &\; \@reviewer \hfill \@signatureplace
               \end{tabular} \par}%
           \end{flushright}
           \vskip 3.6cm
@@ -187,13 +184,12 @@
           \large
           \singlespacing
           {\begin{tabular}[t]{l l}%
-          \medskip Author: &\; \@status \\
-          \bigskip   &\; \@author \hfill \@signatureplace \\
+          \bigskip Author: &\; \@author \hfill \@signatureplace \\
           \bigskip &\; \@secondauthor \hfill \@signatureplace \\
           \bigskip &\; \@thirdauthor \hfill \@signatureplace \\
           \medskip\bigskip &\; \@fourthauthor \hfill \@signatureplace \\
           \bigskip Supervisor: &\; \@supervisor \hfill  \@signatureplace \\
-          % Recenzentas: &\; \@reviewer \hfill \@signatureplace
+          \medskip Reviewer: &\; \@reviewer \hfill \@signatureplace
           \end{tabular} \par}%
       \end{flushright}
       \vskip 3.4cm
@@ -204,14 +200,13 @@
         \large
         \singlespacing
         {\begin{tabular}[t]{l l l}%
-        \medskip Author: &\; \@status  &\\
-        \bigskip   &\; \@author & \hfill &\@signatureplace \\
+        \bigskip Author: &\; \@author & \hfill &\@signatureplace \\
         \medskip\bigskip &\; \@secondauthor & \hfill \@signatureplace \\
         \medskip\bigskip &\; \@thirdauthor & \hfill \@signatureplace \\
         \medskip\bigskip &\; \@fourthauthor & \hfill \@signatureplace \\
         \medskip\bigskip &\; \@fifthauthor & \@signatureplace \\
         \bigskip Supervisor: & \@supervisor \hfill & \@signatureplace \\
-        % Recenzentas: &\; \@reviewer \hfill \@signatureplace
+        \medskip Reviewer: &\; \@reviewer \hfill \@signatureplace
         \end{tabular} \par}%
     \end{flushright}
     \vskip 3.8cm
