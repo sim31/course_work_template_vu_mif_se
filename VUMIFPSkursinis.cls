@@ -113,14 +113,15 @@
 }
 
 \renewcommand\maketitle{\begin{titlepage}%
-  % \checkifdefined{@department}%
-  %   {Tituliniame puslapyje nenurodyta katedra (komanda \protect\department)}
+  \checkifdefined{@department}%
+    {Tituliniame puslapyje nenurodyta studijų program (komanda \protect\department)}
   \checkifdefined{@supervisor}%
     {Tituliniame puslapyje nenurodytas darbo vadovas (komanda \protect\supervisor)}
    ~
   \begin{center}
       {\setstretch{1.3}\large \MakeUppercase{\@university} \\
-          \MakeUppercase{\@faculty} \par }
+          \MakeUppercase{\@faculty} \\
+          \MakeUppercase{\@department} \par }
 
      \null\vfil
      \vskip 2.5cm
